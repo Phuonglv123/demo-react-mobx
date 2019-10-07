@@ -10,6 +10,14 @@ class ItemServices extends BaseAPI {
         return res;
     }
 
+    async getAllItem() {
+        const res = await this.apiCall({
+            url: 'items',
+            method: 'GET'
+        });
+        return res;
+    }
+
 }
 
 export default new ItemServices();

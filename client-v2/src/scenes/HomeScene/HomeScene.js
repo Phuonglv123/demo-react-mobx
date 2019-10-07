@@ -6,10 +6,12 @@ import {toJS} from 'mobx';
 class HomeScene extends Component {
     async componentDidMount(): void {
         await this.props.ProductStore.getCategoriesStrore();
+        await this.props.ProductStore.getAllItemStore();
     }
 
     render() {
         const allCat = toJS(this.props.ProductStore.AllCategories);
+        const item = toJS(this.props.ProductStore.AllItem);
         return (
             <div>
                 <ul>

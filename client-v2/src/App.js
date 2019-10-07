@@ -1,6 +1,7 @@
 import React from 'react';
 import promiseFinally from 'promise.prototype.finally';
 import ProductStore from './stores/ProductStore';
+import AuthStore from './stores/AuthStore';
 import {Provider} from "mobx-react";
 import {createBrowserHistory} from "history";
 import {Router, Route, Switch} from "react-router-dom";
@@ -10,7 +11,8 @@ import {PrivateRoute} from "./components/AppRoute/PrivateRoute";
 import DashboardScene from "./scenes/DashboardScene/DashboardScene";
 
 const stores = {
-    ProductStore
+    ProductStore,
+    AuthStore
 };
 
 // For easier debugging
